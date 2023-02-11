@@ -21,10 +21,9 @@ public class AppSearch extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
         Button button = (Button) findViewById(R.id.button);
 
-        button.setOnClickListener(new View.OnClickListener(){
+       button.setOnClickListener(new View.OnClickListener(){
             @Override
             //On click function
             public void onClick(View view) {
@@ -37,7 +36,7 @@ public class AppSearch extends AppCompatActivity {
                     Intent i = new Intent(AppSearch.this, Game1.class);
                     startActivity(i);
                 }else if(("ghost of tsushima").contains(search)){
-                    Intent i = new Intent(AppSearch.this, Game2.class);
+                     Intent i = new Intent(AppSearch.this, Game2.class);
                     startActivity(i);
                 }else if(("bloodborne").contains(search)){
                     Intent i = new Intent(AppSearch.this, Game3.class);
@@ -45,8 +44,6 @@ public class AppSearch extends AppCompatActivity {
                 }else {
                     Intent i = new Intent(AppSearch.this, NotFound.class);
                     startActivity(i);
-
-                    System.out.println(search + "gggggggggggggggggggggggggggg");
                 }
 
             }
@@ -67,7 +64,7 @@ public class AppSearch extends AppCompatActivity {
                 startActivity(i);
                 return true;
             case R.id.action_next:
-                i = new Intent(AppSearch.this, Game0.class);
+                i = new Intent(AppSearch.this, CardView.class);
                 startActivity(i);
                 return true;
         }
